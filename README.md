@@ -1,82 +1,90 @@
-**E-Commerce Data Analysis Project**
+**Objective**
 
-This project explores and analyzes an E-Commerce transactional dataset using Python. It involves data cleaning, exploratory data analysis (EDA), visualization, and key customer and product insights.
+The goal of this project is to analyze E-Commerce sales data to uncover insights into customer behavior, sales performance, and product trends. This allows businesses to make informed decisions in areas such as inventory management, marketing, and customer retention.
 
-**Dataset Overview**
+**Data Preprocessing & Cleaning**
 
-File Name: Data.csv
+Theory:
+Raw data often contains missing, inconsistent, or invalid entries which can distort analytical results. Preprocessing ensures the quality and usability of the data.
 
-Rows: 112,803
+Steps Taken:
 
-Columns: 8
+Removed rows with missing CustomerID or Description values.
 
-Key Columns:
+Filtered out rows with negative or zero values for Quantity and UnitPrice.
 
-InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country
+Created derived columns like TotalPrice (Quantity × UnitPrice).
 
-**Data Cleaning**
+Concepts Used:
 
-Removed missing CustomerID and Description values.
+Data completeness
 
-Removed entries with non-positive Quantity or UnitPrice.
+Handling null values
 
-Final cleaned dataset: 72,889 rows
+Outlier detection
 
-Key Analysis & Insights
-Sales Analysis
-Total Net Revenue: £1,584,824.50
+**Exploratory Data Analysis (EDA)**
 
-Total Items Sold: 995,093
+Theory:
+EDA is used to summarize the main characteristics of the data and identify patterns, anomalies, and relationships. It guides hypothesis generation and model design.
 
-Monthly Revenue Trend: Identified seasonal peaks and drops
+Key Techniques:
 
-30-Day Rolling Average: Smoother trend to analyze business performance
+Grouping and aggregating data (e.g., by Month, Product, Country)
 
-**Weekday Analysis**
+Visualizing time series trends and distributions
 
-Found which weekdays have the highest average item volume per invoice.
+Analyzing average metrics like AOV (Average Order Value)
 
-Product Analysis
-Top 10 Products by Quantity Sold
+Tools Used:
 
-Top 10 Products by Revenue
+groupby, mean, sum, and plot from Pandas and Matplotlib
 
-Distribution of order quantity and unit price
+**Time Series Analysis**
 
-**Customer Behavior**
+Theory:
+Time series analysis helps track how metrics evolve over time, revealing seasonal patterns, growth trends, and periods of high/low performance.
 
-Unique Customers: 1,790
+Concepts Applied:
 
-Repeat Purchase Rate: 39.27%
+Monthly & Quarterly aggregations
 
-Average Order Value (AOV): £955.81
+Rolling averages to smooth out daily noise
 
-Revenue by Country: Top 10 countries visualized
+Why Important:
 
-**Visualizations**
+Businesses can plan promotions, stock, and logistics around seasonal demand.
 
-Key plots created using matplotlib:
+**Customer Behavior Analysis**
 
-Monthly revenue trends
+Theory:
+Understanding customer buying patterns is key to segmentation and personalization. Key metrics include purchase frequency, order value, and repeat purchase rate.
 
-Weekday sales distribution
+Insights Derived:
 
-Top product charts
+One-time vs repeat buyers
 
-Country-wise revenue
+AOV (Average Order Value)
 
-Quantity and price distributions
+Country-based performance
 
-Rolling average revenue trends
+**Product Performance Analysis**
 
-**Tools Used**
+Theory:
+Product analytics help identify bestsellers and underperformers, enabling better inventory planning and pricing strategy.
 
-Python
+Techniques:
 
-Pandas
+Ranking by quantity sold and revenue
 
-NumPy
+Analyzing price and quantity distribution for sales optimization
 
-Matplotlib
+**Why This Matters**
 
-Jupyter Notebook / Google Colab# Python
+Provides data-driven insights for business decisions
+
+Identifies sales bottlenecks and customer drop-off points
+
+Helps allocate marketing budget to top-selling regions and products
+
+Guides pricing and bundling strategies
