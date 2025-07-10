@@ -3,6 +3,7 @@
 This project explores and analyzes an E-Commerce transactional dataset using Python. It involves data cleaning, exploratory data analysis (EDA), visualization, and key customer and product insights.
 
 **Dataset Overview**
+
 File Name: Data.csv
 
 Rows: 112,803
@@ -14,7 +15,7 @@ Key Columns:
 InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country
 
 **Data Cleaning**
-//
+
 Removed missing CustomerID and Description values.
 
 Removed entries with non-positive Quantity or UnitPrice.
@@ -32,7 +33,7 @@ Monthly Revenue Trend: Identified seasonal peaks and drops
 30-Day Rolling Average: Smoother trend to analyze business performance
 
 **Weekday Analysis**
-//
+
 Found which weekdays have the highest average item volume per invoice.
 
 Product Analysis
